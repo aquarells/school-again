@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1574869840 source:e:\github\my_github\c++\tablice tekstowe\usuwanie\main.cpp
+	<iostream>
+	<string.h>
+	<cstdio>
+	<conio.h>
+

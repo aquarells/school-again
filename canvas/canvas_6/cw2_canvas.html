@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Strona główna</title>
+	</head>
+	<body>
+		<canvas width="500" height="600" id="canvas"></canvas>
+		<script type="text/javascript">
+			const canvas = document.querySelector("#canvas");
+			const ctx = canvas.getContext("2d");
+      // funkcja, która przelicza radiany na stopnie
+			const angleToRadian = function (angle) {
+				return (Math.PI / 180) * angle;
+			};
+
+      // 1) dowolną elipsę obróconą o dowolny kąt (stroke)
+      ctx.beginPath();
+      ctx.ellipse(canvas.width/4,canvas.height/4,60,30,5,0,angleToRadian(360));
+      ctx.strokeStyle = "black";
+      ctx.closePath();
+      ctx.stroke();
+
+      // 2) dowolna wypełnioną figurę stanowiącą wycinek elipsy (fill)
+      ctx.beginPath();
+      ctx.ellipse(canvas.width/3,canvas.height/2,60,30,5,0,angleToRadian(300));
+      ctx.lineTo(canvas.width/3,canvas.height/2);
+      ctx.closePath();
+      ctx.fillStyle = "purple";
+      ctx.fill();
+
+		</script>
+	</body>
+</html>

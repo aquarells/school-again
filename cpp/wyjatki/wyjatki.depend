@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1590131473 source:e:\github\my_github\cpp\wyjatki\main.cpp
+	<iostream>
+	<fstream>
+

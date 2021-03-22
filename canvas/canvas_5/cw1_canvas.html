@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Strona główna</title>
+	</head>
+	<body>
+		<canvas width="500" height="600" id="canvas"></canvas>
+		<script type="text/javascript">
+			const canvas = document.querySelector("#canvas");
+			const ctx = canvas.getContext("2d");
+
+			//cien
+			ctx.save();
+			ctx.shadowOffsetX = -15;
+			ctxshadowOffsetY = 15;
+			ctx.shadowColor = "black";
+			ctx.shadowBlur = 7;
+
+			//tło logo
+			ctx.fillStyle = "#296EB4"; //niebieski
+			ctx.fillRect(20, 30, 200, 200);
+			ctx.restore();
+			ctx.fillStyle = "#FDB833"; //żółty
+			ctx.fillRect(20, 30, 100, 100);
+			ctx.fillRect(120, 130, 100, 100);
+
+			//tekst logo;
+			ctx.font = "bold 64px Montserrat";
+			ctx.fillStyle = "black";
+			ctx.fillText("L", 50, 100);
+			ctx.fillText("K", 150, 200);
+			ctx.font = "bold 64px Montserrat";
+			ctx.fillStyle = "black";
+			ctx.fillText("O", 150, 100);
+			ctx.fillText("C", 50, 200);
+
+			//lighter
+			globalCompositeOperation = "source over";
+			ctx.fillStyle = "red";
+      ctx.fillRect(115,125,10,10);
+		</script>
+	</body>
+</html>

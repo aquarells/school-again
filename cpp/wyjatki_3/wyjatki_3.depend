@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1590738245 source:e:\github\my_github\cpp\wyjatki_3\main.cpp
+	<iostream>
+	<conio.h>
+	"moja_biblioteka.h"
+
+1590738009 e:\github\my_github\cpp\wyjatki_3\moja_biblioteka.h
+
+1590738176 source:e:\github\my_github\cpp\wyjatki_3\moja_biblioteka.cpp
+	"moja_biblioteka.h"
+

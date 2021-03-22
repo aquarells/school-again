@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podstawy Canvasa 2</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <script type="text/javascript">
+      canvas = document.querySelector("#canvas");
+      ctx = canvas.getContext("2d");
+
+      ctx.fillRect(30, 12, 150, 150);
+      ctx.fillRect(30, 170, 150, 100);
+    </script>
+  </body>
+</html>

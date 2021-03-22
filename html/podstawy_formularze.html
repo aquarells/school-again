@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularz</title>
+  </head>
+  <body>
+    <h1><b>Wypełnij formularz o grach!</b></h1>
+
+    <!-- Atrybuty form: 
+     1. action = który skrypt ma przetworzyć dane, które przyjdą z naszego formularza?
+     2. method = jakiej metody HTTP użyć do przesłania danych z naszego formularza (get czy post)?
+     3. enctype = określenie identyfikatora MIME-type zawartości 
+     przesyłanej na serwer metodą post:
+     "application/x-www-form-urlencoded"
+     "multipart/form-data"
+     "text/plain" -->
+
+    <form action="" method="post">
+      <!-- Na początek wybór jednokrotny w formularzu, czyli możliwy jest wybór 
+tylko jednej opcji z wybranego zbioru.
+,,input" w angielskim to ,,dane wejściowe"
+,,label" w angielskim to ,,etykieta"
+Etykiety stosujemy, aby przekazać komputerowi, że ona (etykieta) jest z czymś powiązana.
+Każda kontrolka formularza (o ile nie jest przyciskiem) powinna 
+posiadać etykietę (ustanowioną tagiem label). -->
+
+      <!-- II sposób tworzenia etykieta i powiązywania go:
+<label><input type="radio">Kingdom Come: Deliverance</label> -->
+
+      <div>
+        <fieldset>
+          <legend>Która gra jest najlepsza?</legend>
+
+          <div>
+            <input type="radio" id="radzik" name="najlepsza" value="1" /><label
+              for="radzik"
+              >Kingdom Come: Deliverance</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="geralt"
+              name="najlepsza"
+              value="2"
+              checked
+            /><label for="geralt">Wiedźmin 3: Dziki Gon</label>
+          </div>
+          <div>
+            <input type="radio" id="ezio" name="najlepsza" value="3" /><label
+              for="ezio"
+              >Assassin's Creed II</label
+            >
+          </div>
+        </fieldset>
+      </div>
+      <!-- Aby komputer wiedział, że w naszym formularzu te trzy gry 
+podane jako przykłady należą do jednego pytania i ja sposród nich mam wybrać jedną opcję
+to należy przypisać je do jednej (o takiej samej wartości) nazwy, czyli wpiszę name="" -->
+
+      <!-- Wydzielamy sekcjami (div) w celu przejrzysteszego wyglądu formularza,
+czyli żeby każda gra była jedna pod drugim. -->
+
+      <!-- ,,Fieldset" tak jakby pakuje nam w ramkę podane wybory. -->
+
+      <!-- Z pomocą podwójnego znacznika <fieldset></fieldset> możemy utworzyć 
+zgrupowanie kontorlek formularza otoczone ramką, opatrzone dodatkowo legendą (opisem),
+utworzoną znacznikiem podwójnym <legend></legend>-->
+
+      <br />
+
+      <!-- Tworzymy ponownie wybór jednokrotny, ale o innym typie. -->
+
+      <div>
+        <label for="postac">Ulubiona postać z gry: </label>
+
+        <select id="postac">
+          <option value="H">Henryk ze Skalicy</option>
+          <option value="G" selected>Geralt z Rivii</option>
+          <option value="E">Ezio Auditore da Firenze</option>
+          <option value="J">Jaskier</option>
+          <option value="R">Radzik Kobyła</option>
+          <option value="Z">Zoltan</option>
+        </select>
+      </div>
+      <!-- Po kliknięciu na etykietę lista zyskuje aktywność
+(można więc np. użyć spacji, aby ją rozwinąć) -->
+
+      <br />
+      <!-- Kolejnym krokiem jest utworzenie w formularzu wyboru wielokrotnego, 
+czyli możliwy jest wybór wielu opcji z wybranego zbioru
+(np. wybór konfiguracji danego modelu samochodu)-->
+
+      <div>
+        <fieldset>
+          <legend>W które gry grałeś/aś:</legend>
+          <!-- Jeśli nie chcesz, aby użytkownik miał możliwość odznaczenia wyboru to w znaczniku <input></input>
+wpisujemy ,,disabled", pokażę to teraz na przykładzie Wiedźmina 3: -->
+
+          <div>
+            <label
+              ><input
+                type="checkbox"
+                value="jeden"
+                name="gram[]"
+                disabled
+              />Wiedźmin 3: Dziki Gon</label
+            >
+          </div>
+
+          <div>
+            <label
+              ><input type="checkbox" value="dwa" name="gram[]" />Until
+              Dawn</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="trzy" name="gram[]" />The Elder
+              Scrolls V: Skyrim</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="cztery" name="gram[]" />Dragon Age:
+              Początek</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="piec" name="gram[]" />Assassin's
+              Creed IV: Black Flag</label
+            >
+          </div>
+
+          <div>
+            <label
+              ><input type="checkbox" value="szesc" name="gram[]" />Outlast
+              II</label
+            >
+          </div>
+          <div>
+            <label
+              ><input
+                type="checkbox"
+                value="siedem"
+                name="gram[]"
+              />Kholat</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="osiem" name="gram[]" />Dragon Age:
+              Inkwizycja</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="dziewiec" name="gram[]" />Wiedźmin
+              2: Zabójcy Królów</label
+            >
+          </div>
+
+          <div>
+            <label
+              ><input type="checkbox" value="dziesiec" name="gram[]" />60
+              seconds!</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="jedenascie" name="gram[]" />Grand
+              Theft Auto: San Andreas</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="dwanascie" name="gram[]" />Dying
+              Light</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="trzynascie" name="gram[]" />The
+              Sims 4</label
+            >
+          </div>
+
+          <div>
+            <label
+              ><input type="checkbox" value="czternascie" name="gram[]" />The
+              Elder Scrolls IV: Oblivion</label
+            >
+          </div>
+          <div>
+            <label
+              ><input
+                type="checkbox"
+                value="pietnascie"
+                name="gram[]"
+              />Wolfenstein: The New Order</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="szesnascie" name="gram[]" />The
+              Evil Within</label
+            >
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" value="osiemnascie" name="gram[]" />Layers
+              of Fear</label
+            >
+          </div>
+        </fieldset>
+      </div>
+
+      <br />
+
+      <!--Teraz zrobimy inny typ wyboru wielokrotnego-->
+      <!--Po prostu tworzymy tak jak wybór jednokrotny, ale dodajemy w <select></select> słowo "multiple"-->
+
+      <div>
+        <label for="lokalizacje">Gdzie byłeś/aś w grze?</label>
+
+        <select id="lokalizacje" name="lokalizacje[]" multiple size="5">
+          <option value="W" name="lokalizacje[]">Wyzima</option>
+          <option value="L" name="lokalizacje[]">Leyawiin</option>
+          <option value="S" name="lokalizacje[]">Skalica</option>
+          <option value="T" name="lokalizacje[]">Talmberk</option>
+          <option value="S2" name="lokalizacje[]">Samotnia</option>
+          <option value="K" name="lokalizacje[]">Kirkwall</option>
+          <option value="N" name="lokalizacje[]">Novigrad</option>
+          <option value="R" name="lokalizacje[]">Rataje</option>
+          <option value="D" name="lokalizacje[]">Denerim</option>
+          <option value="KM" name="lokalizacje[]">Kaer Morhen</option>
+          <option value="M" name="lokalizacje[]">Markart</option>
+          <option value="V" name="lokalizacje[]">Val Royeaux</option>
+          <option value="BG" name="lokalizacje[]">Biała Grań</option>
+          <option value="S3" name="lokalizacje[]">Starkhaven</option>
+          <option value="A" name="lokalizacje[]">Anvil</option>
+          <option value="O" name="lokalizacje[]">Orzammar</option>
+        </select>
+        <!--Zaznaczanie wielokrotne =  shift + klik albo ctrl + klik-->
+      </div>
+
+      <br />
+      <!--Wprowadzanie pola tekstowego-->
+
+      <div>
+        <h3>Podstawowe dane:</h3>
+
+        <div>
+          <label>Imię gracza: <input type="text" name="imie" /></label>
+        </div>
+        <br />
+        <div>
+          <label>Hasło: <input type="password" name="haslo" /></label>
+        </div>
+        <br />
+        <div>
+          <label>Szukaj: <input type="search" name="fraza" /></label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

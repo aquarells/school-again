@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1576090012 source:e:\github\my_github\c++\tablice tekstowe\proste_tworzenie\main.cpp
+	<iostream>
+	<string.h>
+

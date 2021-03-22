@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podstawy Canvasa 1</title>
+  </head>
+  <body>
+    <canvas width="300" height="200" id="canvas"></canvas>
+    <script type="text/javascript">
+      //najpierw pobieramy zawartosc elementu
+      const canvas = document.querySelector("#canvas");
+      //oznacza to, że mamy do czynienia z trybem rysowania w dwóch wymiarach
+      const ctx = canvas.getContext("2d");
+
+      //rozpoczynamy rysowanie tą metodą
+      ctx.beginPath();
+      //a potem określamy, co ma narysować
+      ctx.moveTo(30, 30);
+      ctx.lineTo(270, 30);
+      ctx.lineTo(270, 170);
+      ctx.lineTo(30, 170);
+      ctx.closePath();
+    //   ctx.fill()
+      ctx.stroke();
+    </script>
+  </body>
+</html>

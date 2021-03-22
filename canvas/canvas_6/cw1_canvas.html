@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Strona główna</title>
+	</head>
+	<body>
+		<canvas width="500" height="600" id="canvas"></canvas>
+		<script type="text/javascript">
+			const canvas = document.querySelector("#canvas");
+			const ctx = canvas.getContext("2d");
+
+			// funkcja, która przelicza radiany na stopnie
+			const angleToRadian = function (angle) {
+				return (Math.PI / 180) * angle;
+			};
+
+			// 1) koło (fill)
+			ctx.beginPath();
+			ctx.arc(canvas.width / 2, canvas.height / 2, 40, 0, angleToRadian(360));
+			ctx.fillStyle = "green";
+			ctx.fill();
+
+			// 2) dowolny łuk oparty o funkcję arc
+			ctx.beginPath();
+			ctx.arc(
+				canvas.width / 4,
+				canvas.height / 2,
+				40,
+				0,
+				angleToRadian(180),
+				true
+			);
+			ctx.strokeStyle = "black";
+			ctx.stroke();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Strona główna</title>
+	</head>
+	<body>
+		<canvas width="500" height="600" id="canvas"></canvas>
+		<script type="text/javascript">
+			const canvas = document.querySelector("#canvas");
+      const ctx = canvas.getContext("2d");
+
+      const angle = Math.PI/4;
+
+      function draw() {
+        ctx.moveTo(100,0);
+        ctx.lineTo(150,0);
+        ctx.moveTo(-100,0);
+        ctx.lineTo(-150,0);
+      }
+      ctx.lineWidth = 10;
+      ctx.lineCap = "round";
+      ctx.translate(canvas.width/2,canvas.height/2);
+      ctx.beginPath();
+      draw();
+      ctx.rotate(angle);
+      draw();
+      ctx.strokeStyle = "#ADFC92";
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.rotate(angle);
+      draw();
+      ctx.rotate(angle);
+      draw();
+      ctx.strokeStyle = "#4A0D67";
+      ctx.stroke();
+      
+      const angle_2 = Math.PI/6;
+      ctx.beginPath();
+      draw();
+      ctx.rotate(angle_2);
+      draw();
+      ctx.strokeStyle = "#ADFC92";
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.rotate(angle_2);
+      draw();
+      ctx.rotate(angle_2);
+      draw();
+      ctx.strokeStyle = "#4A0D67";
+      ctx.stroke();
+
+    </script>
+	</body>
+</html>

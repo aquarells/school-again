@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna</title>
+</head>
+<body>
+<canvas width="800" height="500" id="canvas"></canvas>
+<script>
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#6A66A3";
+    ctx.font = "italic bold 32px Tahoma";
+    ctx.fillText("Pierwszy tekst.", 10, 60);
+
+    ctx.font = "italic bold 32px Tahoma";
+    ctx.strokeStyle = "#84A9C0";
+    ctx.strokeText("Drugi tekst.", 30, 100);
+
+    const gradient = ctx.createLinearGradient(50, 140, 300, 500);
+    gradient.addColorStop(0,"#DB2B39");
+    gradient.addColorStop(0.25,"#F0CEA0");
+    gradient.addColorStop(0.5,"#29335C");
+    gradient.addColorStop(0.75,"#F3A712");
+    gradient.addColorStop(1,"#534D41");
+
+    ctx.fillStyle = gradient;
+    ctx.fillText("Trzeci tekst.", 50, 140);
+
+    ctx.strokeStyle = gradient;
+    ctx.strokeText("Czwarty tekst.", 70, 180);
+</script>
+</body>
+</html>

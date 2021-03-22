@@ -1,0 +1,10 @@
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\bin\Debug\suma-dwoch-liczb.exe.config
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\bin\Debug\suma-dwoch-liczb.exe
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\bin\Debug\suma-dwoch-liczb.pdb
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma-dwoch-liczb.csprojAssemblyReference.cache
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma_dwoch_liczb.Form1.resources
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma_dwoch_liczb.Properties.Resources.resources
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma-dwoch-liczb.csproj.GenerateResource.cache
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma-dwoch-liczb.csproj.CoreCompileInputs.cache
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma-dwoch-liczb.exe
+E:\Github\my_github\c#\c-\suma-dwoch-liczb\obj\Debug\suma-dwoch-liczb.pdb
