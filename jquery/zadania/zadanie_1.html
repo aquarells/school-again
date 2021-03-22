@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="el st1 st2"><a href="#">Link1</a></div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el st1 st2">5</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el first-attempt">1</div>
+            <div class="el del" data-hack-inactive>6</div>
+            <div class="el hack">3</div>
+            <div class="el del" data-hack-inactive>6</div>
+            <div class="el" data-border>2</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hijack" title="hijack">4</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hack">3</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el first-attempt"><a href="#">Link2</a></div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el del" data-hack-inactive>6</div>
+            <div class="el hack">3</div>
+            <div class="el st1 st2">5</div>
+            <div class="el" data-border>2</div>
+            <div class="el hijack" title="hijack">4</div>
+            <div class="el" data-border>2</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hijack" title="hijack">4</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hack">3</div>
+            <div class="el st1 st2"><a href="#" target="_blank">Link3</a></div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el first-attempt">1</div>
+            <div class="el del" data-hack-inactive>6</div>
+            <div class="el st1 st2">5</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el" data-border>2</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el first-attempt"><a href="#">Link4</a></div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hijack" title="hijack">4</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el hack">3</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el first-attempt">1</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el st1 st2">5</div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el" data-border><a href="#" target="_blank">Link5</a></div>
+            <div class="el last-attempt"><span>7</span></div>
+            <div class="el" data-border>2</div>
+            <div class="el del" data-hack-inactive>6</div>
+            <div class="el last-attempt"><span>7</span></div>
+        </div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <ul>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+        </ul>
+        <ul>
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+            <li>06</li>
+            <li>07</li>
+            <li>08</li>
+            <li>09</li>
+            <li>10</li>
+        </ul>
+        <input type="button" value="Button1"></input>
+        <input type="text">
+        <input type="text" class="test">
+        <input type="text">
+        <input type="text">
+        <input type="text" class="test">
+         
+        <input type="password">
+        <input type="button" value="Button2"></input>
+        <script>
+            // a
+            $('div.first-attempt').css("color", "red");
+
+            // b
+            $('.hijack').css({
+                "height":"100px",
+                "width":"100px",
+                "border":"1px solid black"
+            });
+
+            // c
+            $('.hijack').even().css("border", "3px dotted green");
+            
+            // d
+            $('input[type="button"]').css("padding", "15px");
+
+            // e
+            $('input[type="button"]').first().css({
+                "background-color": "red",
+                "font-size": 15,
+                color: "red"
+            });
+
+            // f
+            $('input:not(.test)').css("border", "1px solid red");
+
+            // g
+            $('ul:last li').css("background", "yellow");
+
+            //h
+            $('ul:first li').slice(2).css("color","red");
+        </script>
+    </body>
+</html>

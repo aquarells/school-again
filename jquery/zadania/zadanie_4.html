@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+      p.center {
+        text-align: center;
+        color: blue;
+      }
+      p.large {
+        font-size: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="item" class="center large">Akapit tekstu.</p>
+    <input
+      type="button"
+      value="Kliknij, aby usunąć wszystkie klasy"
+      onclick="remove_classes()"
+    />
+    <script>
+      //   function remove_classes() {
+      //     $("#item").removeClass();
+      //   }
+      // to tak samo działa jak to na dole
+      const remove_classes = () => $("#item").removeClass();
+    </script>
+  </body>
+</html>
